@@ -1,0 +1,53 @@
+.hero-Img{
+    width: 100%;
+    background: rgba(0,0, 0, 0.5);
+    height: 60vh;
+    position: relative;
+}
+
+.hero-Img::before{
+    
+    background-image: url('../assets/bg-3.jpg');  
+    content: "";
+    height: 100%;
+    width: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   
+
+}
+
+.hero-Img h1{
+    font-size: 2.4rem;
+    color: beige;
+
+}
+.hero-Img p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+    
+.heading{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+}
+
+@media screen and (max-width:640px){
+    .hero-Img h1{
+        font-size: 2rem;
+        color: beige;
+    
+    }
+    
+
+    
+} 
+    

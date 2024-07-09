@@ -1,0 +1,259 @@
+.hero-content{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+.intro-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.hero-content::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+}
+
+.hero .content{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.hero .content h2{
+    font-size: 4rem;
+    padding: 0.6rem 0 1.5rem;
+    color: beige;
+    text-wrap: nowrap;
+}
+
+.hero .content h1{
+    font-size: larger;
+    padding: 0%;
+    color: beige;
+}
+
+/* .content .btn{
+    margin: 1rem 0.2rem;
+
+} */
+
+/* src/App.css */
+.buttons{
+    
+    align-items: center;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 1px;
+    color: transparent;
+    
+    
+    border-radius: 0%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 80%;
+    transform: scale(2);
+    left: 42%;
+    border: 2px solid;
+}
+    
+ .btn{
+    display: inline-block;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 5px;
+    color: beige;
+    border-width: 2px;
+    border-radius: 0%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    left: 45%;
+    size: 40;
+    border-color: beige;
+    
+    
+
+  }
+
+ 
+.download-button{
+    display: inline-block;
+    align-items: center;
+    padding: 5px 15px;
+    margin: 5px;
+    color: beige;
+    background-color:transparent;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-color: beige;
+    text-wrap: initial;
+}
+  
+  /* .btn-light {
+    display: inline-block;
+    align-items: center;
+    padding: 5px 15px;
+    margin: 5px;
+    color: beige;
+    background-color:transparent;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-color: beige;
+    
+  } */
+  
+  .btn:hover,
+  .btn-light:hover {
+    opacity: 0.8;
+  }
+  
+  .buttons .content{
+    text-align: center;
+    justify-content: center;
+    border-radius: 0%;
+ }
+
+ 
+.typing{
+    color: beige;
+    font-size: xx-large;
+}
+
+@media screen and (max-width: 575.98px){
+    .hero .content{
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        text-align: center;
+    }
+    
+    .hero .content h2{
+        font-size:  medium;
+        padding: 0.6rem 0 1.5rem;
+        color: beige;
+    }
+    
+    .hero .content h1{
+        font-size: x-small;
+        padding: 0%;
+        color: beige;
+    }
+
+    .buttons{
+    
+        align-items: center;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 1px;
+        color: transparent;
+        
+        border: 0;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 60%;
+        transform: scale(1);
+        left: 18%;
+    }
+
+    .btn{
+        display: inline-block;
+        align-items: center;
+        padding: 10px 20px;
+        margin: 5px;
+        
+        color: beige;
+        border: 1;
+        border-radius: 0%;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        left: 50%;
+        size: 40;
+    
+    }
+     
+      
+      
+      .btn-light {
+        display: inline-block;
+        align-items: center;
+        padding: 10px 20px;
+        margin: 5px;
+        color: black;
+        background-color: beige;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .typing{
+        color: beige;
+        font-size:larger;
+        text-wrap: nowrap;
+    }
+      
+    .hero-content{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+    }
+    
+    .intro-img{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+    }
+    
+    .hero-content::after{
+        content:"";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0.8;
+    }
+}
+
+  
+  
