@@ -1,18 +1,51 @@
+/* Hero Section Container */
 .hero-content{
     width: 100%;
     height: 100vh;
     position: relative;
     display: flex;
+    overflow: hidden;
 }
 
+.hero{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Image with Animation */
 .intro-img{
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     object-fit: cover;
+    animation: zoomIn 20s ease-in-out infinite alternate;
 }
 
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Dark Overlay */
+.hero-overlay{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(20,20,40,0.75) 100%);
+    z-index: 1;
+}
+
+/* Accent Glow Effect */
 .hero-content::after{
     content:"";
     width: 100%;
@@ -20,240 +53,388 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
-    opacity: 0.8;
+    background: radial-gradient(circle at 30% 50%, rgba(0, 230, 239, 0.1) 0%, transparent 50%);
+    z-index: 2;
 }
 
-.hero{
-    height: 100%;
-    width: 100%;
-}
-
+/* Main Content Container - Perfectly Centered */
 .hero .content{
     position: absolute;
-    transform: translate(-50%,-50%);
     top: 50%;
-    left: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     text-align: center;
+    z-index: 10;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
+/* Main Heading */
 .hero .content h2{
     font-size: 4rem;
-    padding: 0.6rem 0 1.5rem;
-    color: beige;
-    text-wrap: nowrap;
+    padding: 0;
+    margin: 0 auto 2rem auto;
+    color: #f5f5dc;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+    text-align: center !important;
+    width: 100%;
+    word-wrap: break-word;
+    line-height: 1.2;
+    display: block;
 }
 
-.hero .content h1{
-    font-size: larger;
-    padding: 0%;
-    color: beige;
+/* Highlighted Name */
+.hero .content .highlight{
+    background: linear-gradient(135deg, #00e6ef 0%, #00a8b5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
 }
 
-/* .content .btn{
-    margin: 1rem 0.2rem;
-
-} */
-
-/* src/App.css */
-.buttons{
-    
-    align-items: center;
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 1px;
-    color: transparent;
-    
-    
-    border-radius: 0%;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 16px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 80%;
-    transform: scale(2);
-    left: 42%;
-    border: 2px solid;
-}
-    
- .btn{
-    display: inline-block;
-    align-items: center;
-    padding: 10px 20px;
-    margin: 5px;
-    border: 5px;
-    color: beige;
-    border-width: 2px;
-    border-radius: 0%;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 16px;
-    left: 45%;
-    size: 40;
-    border-color: beige;
-    
-    
-
-  }
-
- 
-.download-button{
-    display: inline-block;
-    align-items: center;
-    padding: 5px 15px;
-    margin: 5px;
-    color: beige;
-    background-color:transparent;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-color: beige;
-    text-wrap: initial;
-}
-  
-  /* .btn-light {
-    display: inline-block;
-    align-items: center;
-    padding: 5px 15px;
-    margin: 5px;
-    color: beige;
-    background-color:transparent;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-color: beige;
-    
-  } */
-  
-  .btn:hover,
-  .btn-light:hover {
-    opacity: 0.8;
-  }
-  
-  .buttons .content{
-    text-align: center;
-    justify-content: center;
-    border-radius: 0%;
- }
-
- 
+/* Typing Effect Container */
 .typing{
-    color: beige;
-    font-size: xx-large;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    margin-bottom: 3rem;
 }
 
-@media screen and (max-width: 575.98px){
+.typing-wrapper{
+    color: #f5f5dc;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-align: center !important;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Action Buttons */
+.buttons{
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+}
+    
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+}
+
+.btn span{
+    position: relative;
+    z-index: 2;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 1;
+}
+
+/* Primary Button (View Projects) */
+.btn-primary{
+    background: linear-gradient(135deg, #00e6ef 0%, #00a8b5 100%);
+    color: #000;
+    border-color: #00e6ef;
+    box-shadow: 0 4px 15px rgba(0, 230, 239, 0.4);
+}
+
+.btn-primary::before{
+    background: linear-gradient(135deg, #00a8b5 0%, #008a94 100%);
+}
+
+.btn-primary:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 230, 239, 0.6);
+}
+
+.btn-primary:hover::before{
+    left: 0;
+}
+
+/* Secondary Button (Download Resume) */
+.btn-secondary{
+    background: transparent;
+    color: #f5f5dc;
+    border: 2px solid #f5f5dc;
+    box-shadow: 0 4px 15px rgba(245, 245, 220, 0.2);
+}
+
+.btn-secondary::before{
+    background: rgba(245, 245, 220, 0.1);
+}
+
+.btn-secondary:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(245, 245, 220, 0.3);
+    background: rgba(245, 245, 220, 0.05);
+}
+
+.btn-secondary:hover::before{
+    left: 0;
+}
+
+.btn:active{
+    transform: translateY(-1px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    animation: bounce 2s infinite;
+}
+
+.mouse{
+    width: 26px;
+    height: 40px;
+    border: 2px solid #f5f5dc;
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse::before{
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: #00e6ef;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@keyframes scroll{
+    0% {
+        opacity: 1;
+        top: 8px;
+    }
+    100% {
+        opacity: 0;
+        top: 24px;
+    }
+}
+
+/* Responsive Design - Large Desktop */
+@media screen and (max-width: 1600px){
     .hero .content{
-        position: absolute;
-        transform: translate(-50%,-50%);
-        top: 50%;
-        left: 50%;
-        text-align: center;
-    }
-    
-    .hero .content h2{
-        font-size:  medium;
-        padding: 0.6rem 0 1.5rem;
-        color: beige;
-    }
-    
-    .hero .content h1{
-        font-size: x-small;
-        padding: 0%;
-        color: beige;
+        padding: 0 60px;
     }
 
-    .buttons{
-    
-        align-items: center;
-        display: inline-block;
-        padding: 5px 10px;
-        margin: 1px;
-        color: transparent;
-        
-        border: 0;
-        border-radius: 5px;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 16px;
-        position: absolute;
-        transform: translate(-50%,-50%);
-        top: 60%;
-        transform: scale(1);
-        left: 18%;
+    .hero .content h2{
+        font-size: 3.8rem;
+    }
+
+    .typing-wrapper{
+        font-size: 1.9rem;
+    }
+}
+
+/* Laptop/Desktop (1024px - 1440px) */
+@media screen and (max-width: 1440px){
+    .hero .content{
+        padding: 0 50px;
+    }
+
+    .hero .content h2{
+        font-size: 3.5rem;
+        letter-spacing: 2.5px;
+    }
+
+    .typing-wrapper{
+        font-size: 1.8rem;
     }
 
     .btn{
-        display: inline-block;
-        align-items: center;
-        padding: 10px 20px;
-        margin: 5px;
-        
-        color: beige;
-        border: 1;
-        border-radius: 0%;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
+        padding: 15px 36px;
         font-size: 16px;
-        left: 50%;
-        size: 40;
-    
-    }
-     
-      
-      
-      .btn-light {
-        display: inline-block;
-        align-items: center;
-        padding: 10px 20px;
-        margin: 5px;
-        color: black;
-        background-color: beige;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 16px;
-      }
-
-      .typing{
-        color: beige;
-        font-size:larger;
-        text-wrap: nowrap;
-    }
-      
-    .hero-content{
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        display: flex;
-    }
-    
-    .intro-img{
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        object-fit: cover;
-    }
-    
-    .hero-content::after{
-        content:"";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: black;
-        opacity: 0.8;
     }
 }
 
-  
-  
+/* Tablet Landscape (768px - 1024px) */
+@media screen and (max-width: 1024px){
+    .hero .content{
+        padding: 0 40px;
+    }
+
+    .hero .content h2{
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .typing-wrapper{
+        font-size: 1.6rem;
+    }
+
+    .btn{
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+}
+
+/* Tablet Portrait (768px) */
+@media screen and (max-width: 768px){
+    .hero-content{
+        height: 100vh;
+    }
+
+    .hero .content{
+        padding: 0 30px;
+    }
+
+    .hero .content h2{
+        font-size: 2.5rem;
+        letter-spacing: 1.5px;
+        line-height: 1.3;
+        margin-bottom: 1.8rem;
+    }
+    
+    .typing{
+        min-height: 60px;
+        margin-bottom: 2.2rem;
+    }
+
+    .typing-wrapper{
+        font-size: 1.4rem;
+    }
+
+    .buttons{
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn{
+        padding: 13px 30px;
+        font-size: 15px;
+        width: auto;
+    }
+
+    .scroll-indicator{
+        bottom: 20px;
+    }
+}
+
+/* Mobile Large (576px) */
+@media screen and (max-width: 575.98px){
+    .hero .content{
+        padding: 0 20px;
+    }
+    
+    .hero .content h2{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 1.3;
+    }
+
+    .typing{
+        min-height: 55px;
+        margin-bottom: 2rem;
+    }
+
+    .typing-wrapper{
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .buttons{
+        gap: 15px;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .btn{
+        padding: 14px 32px;
+        font-size: 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .scroll-indicator{
+        display: none;
+    }
+}
+
+/* Mobile Small (400px and below) */
+@media screen and (max-width: 400px){
+    .hero .content{
+        padding: 0 15px;
+    }
+
+    .hero .content h2{
+        font-size: 1.7rem;
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .typing{
+        min-height: 50px;
+        margin-bottom: 1.5rem;
+    }
+
+    .typing-wrapper{
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .btn{
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+}

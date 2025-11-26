@@ -1,9 +1,7 @@
 import "./NavbarStyles.css";
 import {Link} from "react-router-dom";
-
-import React from "react";
+import React, { useState } from "react";
 import {FaBars,FaTimes} from "react-icons/fa";
-import { useState } from "react";
 
 const Navbar =()=>{
 
@@ -37,13 +35,8 @@ const Navbar =()=>{
         </ul>
 
         <div className="hamburger" onClick={handleClick}>
-        {click? <FaTimes size={20} style={{color:"#fff"}}/> : <FaBars size={20} style={{color:"#fff"}}/>}
-        {/* <FaTimes size={20} style={{color:"#fff"}}/>
-        <FaBars size={20} style={{color:"#fff"}}/> */}
-
-
+        {click? <FaTimes size={20} className="hamburger-icon"/> : <FaBars size={20} className="hamburger-icon"/>}
         </div>
-
 
         </div>
     )
