@@ -1,10 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaArrowRight, FaLinkedinIn, FaGithub, FaEnvelope,
-  FaPython, FaJava, FaReact, FaAws, FaDatabase
-} from "react-icons/fa";
-import { SiPostgresql, SiTableau, SiPowerbi, SiTypescript, SiScikitlearn } from "react-icons/si";
+import { FaArrowRight, FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 import "./index.css";
 
 const projects = [
