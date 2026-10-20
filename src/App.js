@@ -124,9 +124,10 @@ function App() {
           <span className="brand-copy">Meet Kothari</span>
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
-          <a href="#work">Work</a>
           <a href="#experience">Experience</a>
-          <a href="#about">About</a>
+          <a href="#work">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#leadership">Leadership</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="nav-cta" href="/MeetKothari-Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
@@ -193,6 +194,34 @@ function App() {
           <span>Business Process Analysis</span>
         </section>
 
+        <section id="experience" className="section experience-section">
+          <SectionTitle
+            kicker="Experience"
+            title="Working across data, AI, and enterprise systems."
+            copy="My experience spans university data operations, applied machine learning, and client-facing ERP consulting."
+          />
+          <div className="timeline">
+            {experiences.map((exp, index) => (
+              <motion.article
+                className="timeline-item"
+                key={exp.role}
+                initial={{ opacity: 0, x: index % 2 ? 18 : -18 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: .3 }}
+                transition={{ duration: .5 }}
+              >
+                <div className="timeline-dot" />
+                <div className="timeline-meta">{exp.meta}</div>
+                <div className="timeline-content">
+                  <h3>{exp.role}</h3>
+                  <p className="company">{exp.company}</p>
+                  <ul>{exp.points.map(point => <li key={point}>{point}</li>)}</ul>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </section>
+
         <section id="work" className="section projects-section">
           <SectionTitle
             kicker="Selected work"
@@ -225,37 +254,9 @@ function App() {
           </div>
         </section>
 
-        <section id="experience" className="section experience-section">
-          <SectionTitle
-            kicker="Experience"
-            title="Working across data, AI, and enterprise systems."
-            copy="My experience spans university data operations, applied machine learning, and client-facing ERP consulting."
-          />
-          <div className="timeline">
-            {experiences.map((exp, index) => (
-              <motion.article
-                className="timeline-item"
-                key={exp.role}
-                initial={{ opacity: 0, x: index % 2 ? 18 : -18 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: .3 }}
-                transition={{ duration: .5 }}
-              >
-                <div className="timeline-dot" />
-                <div className="timeline-meta">{exp.meta}</div>
-                <div className="timeline-content">
-                  <h3>{exp.role}</h3>
-                  <p className="company">{exp.company}</p>
-                  <ul>{exp.points.map(point => <li key={point}>{point}</li>)}</ul>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </section>
-
-        <section id="about" className="section about-grid">
+        <section id="education" className="section about-grid education-section">
           <div>
-            <SectionTitle kicker="About" title="Technical depth, with business context." />
+            <SectionTitle kicker="Education" title="The foundation behind my work." />
             <p className="about-copy">
               I’m pursuing an MS in Management Information Systems at Texas A&M University’s Mays Business School after
               completing a B.Tech in Computer Science and Engineering with a Data Science specialization at D.J. Sanghvi College of Engineering.
@@ -276,15 +277,22 @@ function App() {
             </div>
           </div>
 
-          <div className="leadership-card">
-            <span className="kicker">Leadership</span>
-            <h3>Marketing Head · DJS Speedsters</h3>
-            <p>Led a 15-member marketing team and represented the team at the FMAE MotoStudent competition.</p>
-            <div className="leadership-stats">
-              <div><strong>15</strong><span>team members</span></div>
-              <div><strong>2</strong><span>sponsorships</span></div>
-              <div><strong>$12.7K</strong><span>secured</span></div>
-            </div>
+        </section>
+
+        <section id="leadership" className="section leadership-section">
+          <SectionTitle kicker="Leadership" title="Leading beyond the classroom." copy="Teamwork, ownership, communication, and turning ambitious ideas into outcomes." />
+          <div className="leadership-grid">
+            <article className="leadership-card">
+              <span className="kicker">DJS Speedsters · Mar 2023 — Sep 2025</span>
+              <h3>Marketing Head</h3>
+              <p>Led a 15-member marketing team, secured two sponsorships totaling $12,700, and represented the team at FMAE MotoStudent, presenting the Cost Report.</p>
+              <div className="leadership-stats"><div><strong>15</strong><span>team members</span></div><div><strong>2</strong><span>sponsorships</span></div><div><strong>$12.7K</strong><span>secured</span></div></div>
+            </article>
+            <article className="leadership-card">
+              <span className="kicker">S4DS</span>
+              <h3>Society for Data Science</h3>
+              <p>Leadership involvement with S4DS. Role, dates, initiatives, and impact details to be added after confirmation.</p>
+            </article>
           </div>
         </section>
 
