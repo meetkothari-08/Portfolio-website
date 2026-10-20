@@ -146,3 +146,9 @@ footer{width:min(calc(100% - 40px),var(--max));margin:auto;border-top:1px solid 
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+.education-section{display:block}
+.education-section>div{max-width:900px}
+.leadership-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.leadership-grid .leadership-card{position:static;min-height:310px}
+@media(max-width:760px){.leadership-grid{grid-template-columns:1fr}}
