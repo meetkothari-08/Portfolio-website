@@ -141,8 +141,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .7 }}
           >
-            <div className="availability"><span /> Open to data, AI & information systems opportunities</div>
-            <p className="hero-kicker">MS-MIS @ Texas A&M · Data + AI + Business Systems</p>
+<p className="hero-kicker">MS-MIS @ Texas A&M · Data + AI + Business Systems</p>
             <h1>I turn complex data into <em>clear decisions</em> and intelligent products.</h1>
             <p className="hero-lede">
               I’m Meet Kothari, a Management Information Systems graduate student at Texas A&M building at the intersection
@@ -261,8 +260,7 @@ function App() {
               <span className="kicker">DJS Speedsters · Mar 2023 — Sep 2025</span>
               <h3>Marketing Head</h3>
               <p>Led a 15-member marketing team, secured two sponsorships totaling $12,700, and represented the team at FMAE MotoStudent, presenting the Cost Report.</p>
-              <div className="leadership-stats"><div><strong>15</strong><span>team members</span></div><div><strong>2</strong><span>sponsorships</span></div><div><strong>$12.7K</strong><span>secured</span></div></div>
-            </article>
+</article>
             <article className="leadership-card">
               <span className="kicker">Society for Data Science (S4DS) · Aug 2023 — May 2025</span>
               <h3>Publicity Head</h3>
