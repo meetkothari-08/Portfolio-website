@@ -159,32 +159,7 @@ function App() {
             </div>
           </motion.div>
 
-          <motion.div
-            className="hero-panel"
-            initial={{ opacity: 0, scale: .96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: .7, delay: .12 }}
-          >
-            <div className="panel-label">Current focus</div>
-            <div className="signal-card">
-              <span className="signal-number">71K+</span>
-              <span className="signal-label">digital objects supported through repository data work</span>
-            </div>
-            <div className="signal-grid">
-              <div><strong>4.0</strong><span>MS-MIS GPA</span></div>
-              <div><strong>92%</strong><span>CLTV R²</span></div>
-              <div><strong>2</strong><span>IEEE publications</span></div>
-              <div><strong>$12.7K</strong><span>sponsorships secured</span></div>
-            </div>
-            <div className="mini-stack">
-              <span><FaPython /> Python</span>
-              <span><SiPostgresql /> PostgreSQL</span>
-              <span><SiScikitlearn /> ML</span>
-              <span><SiTableau /> Tableau</span>
-              <span><FaReact /> React</span>
-            </div>
-          </motion.div>
-        </section>
+</section>
 
         <section className="proof-strip">
           <span>Machine Learning</span><i />
@@ -289,9 +264,9 @@ function App() {
               <div className="leadership-stats"><div><strong>15</strong><span>team members</span></div><div><strong>2</strong><span>sponsorships</span></div><div><strong>$12.7K</strong><span>secured</span></div></div>
             </article>
             <article className="leadership-card">
-              <span className="kicker">S4DS</span>
-              <h3>Society for Data Science</h3>
-              <p>Leadership involvement with S4DS. Role, dates, initiatives, and impact details to be added after confirmation.</p>
+              <span className="kicker">Society for Data Science (S4DS) · Aug 2023 — May 2025</span>
+              <h3>Publicity Head</h3>
+              <p>Led publicity campaigns for major technical events, including the national-level DataHack hackathon, helping drive 1,300+ student registrations from across India through targeted event promotion and outreach.</p>
             </article>
           </div>
         </section>
