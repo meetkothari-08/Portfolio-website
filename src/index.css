@@ -29,7 +29,7 @@ button,input,textarea{font:inherit}
 .nav-cta{justify-self:end;font-size:13px;border:1px solid var(--line);border-radius:999px;padding:10px 16px}
 .nav-cta:hover{background:var(--text);color:var(--bg)}
 .section{width:min(calc(100% - 40px),var(--max));margin:0 auto;padding:120px 0}
-.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.22fr .78fr;gap:70px;align-items:center;padding-top:72px;padding-bottom:72px}
+.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:center;padding-top:72px;padding-bottom:72px}
 .availability{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:12px;color:var(--muted);margin-bottom:28px}
 .availability span{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}
 .hero-kicker,.kicker{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:var(--accent);font-weight:500}
@@ -152,3 +152,7 @@ footer{width:min(calc(100% - 40px),var(--max));margin:auto;border-top:1px solid 
 .leadership-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .leadership-grid .leadership-card{position:static;min-height:310px}
 @media(max-width:760px){.leadership-grid{grid-template-columns:1fr}}
+
+/* Hero is now editorial and text-led, without the former statistics panel. */
+.hero-copy{max-width:1000px}
+.hero h1{max-width:1000px}
